@@ -1,31 +1,27 @@
 #include <string>
 #include <iostream>
 #include "Empregado.hpp"
+#define Meses_Trabalhados 12
 
 class Vendedor : public Empregado {
 
   public:
-	static constexpr int Meses_Trabalhados = 12;
 	double quotaMensalVendas;
-	
-	Vendedor(std::string nome, double salarioHora, double quotaMensalVendas, double horasTrabalhadas){
-      nome = nome;
-      salarioHora = salarioHora;
-      quotaMensalVendas = quotaMensalVendas;
-      horasTrabalhadas = horasTrabalhadas;
+	double quotaAnualTotal;
+
+	Vendedor(std::string nome, double salario, double quota, double horas){
+      NomeEmpregado = nome;
+      salarioHora = salario;
+      quotaMensalVendas = quota;
+      horasTrabalhadas = horas;
+	quotaAnualTotal = quotaMensalVendas * Meses_Trabalhados;
     }
-	
-	
-	double quotaTotalAnual() {
-	  return quotaMensalVendas * 12;
-	}
-	
+
 	virtual void print(){
-      std::cout << "Nome: " << this->nome << std::endl;
+      std::cout << "Nome: " << this->NomeEmpregado << std::endl;
       std::cout << "Salario: " << this->pagamentoMes(this->horasTrabalhadas) << std::endl;
-      std::cout << "Quota vendas: " << this->quotaTotalAnual() << std::endl;
+      std::cout << "Quota vendas: " << this->quotaAnualTotal << std::endl;
       std::cout << std::endl;
     }
-	
-};
 
+};
