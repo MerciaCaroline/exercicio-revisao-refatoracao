@@ -3,44 +3,24 @@
 
 int main() {
 
-  Engenheiro eng1;
-  eng1.nome = "Joao Snow";
-  eng1.salarioHora = 35;
-  eng1.projetos = 3; 
+  Engenheiro eng1 = Engenheiro("Joao Snow", 35, 3, 9.5);
     eng1.print();
 
-  Engenheiro eng2;
-  eng2.nome = "Daniela Targaryen";
-  eng2.salarioHora = 30;
-  eng2.projetos = 1; 
+  Engenheiro eng2 = Engenheiro("Daniela Targaryen", 30, 1, 8);
     eng2.print();
 
-  Engenheiro eng3;
-  eng3.nome = "Bruno Stark";
-  eng3.salarioHora = 30;
-  eng3.projetos = 2; 
-   eng3.print();
+    Engenheiro eng3 = Engenheiro("Bruno Stark", 30, 2,8);
+    eng3.print();
 
-	
-	
-	
-  Vendedor vend1;
-  vend1.nome = "Tonho Lannister";
-  vend1.salarioHora = 20;
-  vend1.quotaMensalVendas = 5000;
+
+  Vendedor vend1 = Vendedor("Tonho Lannister", 20, 5000,6);
     vend1.print();
 
-  Vendedor vend2;
-  vend2.nome = "Jose Mormont";
-  vend2.salarioHora = 25;
-  vend2.quotaMensalVendas = 3000;
+    Vendedor vend2 = Vendedor("Jose Mormont", 25, 3000,8);
     vend2.print();
 
-  Vendedor vend3;
-  vend3.nome = "Sonia Stark";
-  vend3.salarioHora = 30;
-  vend3.quotaMensalVendas = 4000;
+  Vendedor vend3 = Vendedor("Sonia Stark", 30, 4000,8);
     vend3.print();
 
-  return 0;	
+  return 0;
 }
